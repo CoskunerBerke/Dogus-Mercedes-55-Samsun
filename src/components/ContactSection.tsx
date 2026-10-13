@@ -1,66 +1,80 @@
 import React from 'react';
-import { Phone, MapPin, Clock, Navigation } from 'lucide-react';
+import { Phone, MapPin, Mail, Printer, Building2 } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="iletisim" className="py-20 bg-[#0b0c0e]">
+    <section id="iletisim" className="py-20 bg-[#0e1014]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="mb-12 pb-6 border-b border-zinc-800">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 mb-2">
-            İLETİŞİM & KONUM
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-500 mb-2">
+            İLETİŞİM & BAYİLİK
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Adres ve Telefon Bilgilerimiz
+            Fabrika Merkez & Bölge Bayilik Bilgilerimiz
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left Column: Direct Contact Info */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 bg-[#121418] border border-zinc-800 rounded-xl p-6 sm:p-8">
+          {/* Left Column: Direct Factory & Regional Dealer Info */}
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 bg-[#14171c] border border-zinc-800 rounded-xl p-6 sm:p-8">
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 block mb-2">
-                  Servis & Acil Yol Yardım (GSM / WhatsApp)
+                <span className="text-xs font-bold uppercase tracking-wider text-red-500 block mb-1">
+                  Merkez Fabrika Santral
                 </span>
                 <a
-                  href="tel:05522605666"
+                  href="tel:+903622666222"
                   className="text-3xl sm:text-4xl font-black text-white hover:text-zinc-300 transition-colors block"
                 >
-                  0552 260 56 66
+                  +90 (362) 266 62 22
                 </a>
               </div>
 
-              <div className="pt-5 border-t border-zinc-800">
-                <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 block mb-1">
-                  Sabit Servis Santrali
-                </span>
-                <a
-                  href="tel:03622605666"
-                  className="text-xl font-bold text-zinc-200 hover:text-white transition-colors block"
-                >
-                  (0362) 260 56 66
-                </a>
-              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-5 border-t border-zinc-800">
+                <div className="flex items-start gap-2.5">
+                  <Printer className="w-4 h-4 text-zinc-400 shrink-0 mt-1" />
+                  <div>
+                    <span className="text-xs font-bold text-zinc-400 block">Faks</span>
+                    <span className="text-sm font-semibold text-zinc-200">+90 (362) 266 66 99</span>
+                  </div>
+                </div>
 
-              <div className="pt-5 border-t border-zinc-800 flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Açık Adres</h4>
-                  <p className="text-sm text-zinc-300 mt-1 leading-relaxed">
-                    İstiklal Mahallesi, 19 Mayıs Sanayi Sitesi, 58. Sokak No:31/26, Tekkeköy / Samsun
-                  </p>
+                <div className="flex items-start gap-2.5">
+                  <Mail className="w-4 h-4 text-zinc-400 shrink-0 mt-1" />
+                  <div>
+                    <span className="text-xs font-bold text-zinc-400 block">E-Posta</span>
+                    <a
+                      href="mailto:emek@emeklastik.com.tr"
+                      className="text-sm font-semibold text-white hover:text-red-400 transition-colors"
+                    >
+                      emek@emeklastik.com.tr
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div className="pt-5 border-t border-zinc-800 flex items-start gap-3">
-                <Clock className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-sm font-bold text-white">Çalışma Saatleri</h4>
-                  <p className="text-sm text-zinc-300 mt-1">
-                    Pazartesi – Cumartesi: 08:00 – 19:00
+                  <h4 className="text-sm font-bold text-white">
+                    Merkez & Fabrika Adresi (Samsun OSB)
+                  </h4>
+                  <p className="text-sm text-zinc-300 mt-1 leading-relaxed">
+                    Organize Sanayi Bölgesi, Vali Erdoğan Cebeci Bulvarı No:70, P.K.: 55330 Kutlukent, Tekkeköy / SAMSUN
+                  </p>
+                </div>
+              </div>
+
+              {/* Regional Dealer from emeklastik.com.tr */}
+              <div className="pt-5 border-t border-zinc-800 flex items-start gap-3">
+                <Building2 className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="text-sm font-bold text-white">Gaziantep Bölge Bayii</h4>
+                  <p className="text-xs text-zinc-300 mt-1 leading-relaxed">
+                    Çakmak Mahallesi Başak Sokak No:46 Şehitkamil / GAZİANTEP
                   </p>
                   <p className="text-xs text-zinc-400 mt-1">
-                    7/24 Yol Yardım Hattımız Aktiftir
+                    Tel: <a href="tel:+903423236053" className="text-zinc-200 hover:underline">+90 (342) 323 60 53</a> | Faks: +90 (342) 324 98 79 | email@eldi.com.tr
                   </p>
                 </div>
               </div>
@@ -68,33 +82,31 @@ export const ContactSection: React.FC = () => {
 
             <div className="pt-6 border-t border-zinc-800 grid grid-cols-1 sm:grid-cols-2 gap-3">
               <a
-                href="tel:05522605666"
-                className="py-3.5 px-4 rounded-lg bg-white text-black font-extrabold text-sm text-center hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2"
+                href="tel:+903622666222"
+                className="py-3.5 px-4 rounded-lg bg-red-600 hover:bg-red-700 text-white font-extrabold text-sm text-center transition-colors flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 fill-current" />
-                <span>Hemen Ara</span>
+                <span>Fabrikayı Ara</span>
               </a>
 
               <a
-                href="https://maps.app.goo.gl/L96AQBgHhupn1F45A"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:emek@emeklastik.com.tr"
                 className="py-3.5 px-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-bold text-sm text-center border border-zinc-700 transition-colors flex items-center justify-center gap-2"
               >
-                <Navigation className="w-4 h-4" />
-                <span>Yol Tarifi Al</span>
+                <Mail className="w-4 h-4" />
+                <span>E-Posta Gönder</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Clean Full-Height Map */}
-          <div className="lg:col-span-7 rounded-xl overflow-hidden border border-zinc-800 bg-[#121418] min-h-[380px]">
+          {/* Right Column: Clean Full-Height Map of Samsun OSB Factory */}
+          <div className="lg:col-span-7 rounded-xl overflow-hidden border border-zinc-800 bg-[#14171c] min-h-[420px]">
             <iframe
-              title="Doğuş Mercedes Samsun Harita Konumu"
-              src="https://maps.google.com/maps?q=41.2383282,36.4175292&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              title="Emek Lastik Samsun Organize Sanayi Bölgesi Harita Konumu"
+              src="https://maps.google.com/maps?q=Emek%20Lastik%20Organize%20Sanayi%20B%C3%B6lgesi%20Vali%20Erdo%C4%9Fan%20Cebeci%20Bulvar%C4%B1%20No:70%20Tekkek%C3%B6y%20Samsun&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '420px' }}
+              style={{ border: 0, minHeight: '440px' }}
               allowFullScreen={false}
               loading="lazy"
               className="w-full h-full"

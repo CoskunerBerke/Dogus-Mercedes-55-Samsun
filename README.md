@@ -1,53 +1,38 @@
-# Doğuş Mercedes 55 Samsun • Özel Servis & Orijinal Yedek Parça Merkezi
+# Emek Lastik ve Plastik Ayakkabı San. Tic. A.Ş. • Kurumsal Web Sitesi
 
-Samsun Tekkeköy 19 Mayıs Sanayi Sitesinde faaliyet gösteren **Doğuş Mercedes Servis ve Yedek Parça (`@dogusmercedes55`)** için hazırlanan modern, prestijli ve yüksek dönüşümlü kurumsal web platformu.
+1961 yılında Doğan ELDEMİR tarafından Samsun'da kurulan ve Samsun Organize Sanayi Bölgesi'ndeki 20.000 m² üretim tesisinden 18 ülkeye ihracat yapan **Emek Lastik (`emeklastik.com.tr`)** için hazırlanan modern, güvenli ve hızlı kurumsal web sitesi.
 
 ---
 
 ## 🌟 Öne Çıkan Özellikler
 
-1. **İnteraktif Mercedes-Benz Bakım & Arıza Teşhis Robotu (`ServicePlanner.tsx`):**
-   - Kasa koduna göre seçim (*C-Serisi W203/W204/W205/W206, E-Serisi W211/W212/W213/W214, CLA/A/B, GLA/GLC/GLE SUV, S-Serisi, Vito/Sprinter*).
-   - Seçilen kasaya özel motor yağı spesifikasyonu (`MB-Approval 229.51 / 229.52`), işlem adımları, tahmini süre ve sorumlu uzman bilgisi.
-   - Tek tıkla seçilen reçeteyi WhatsApp üzerinden doğrudan ustaya gönderip fiyat/randevu alma imkanı.
+1. **Birebir Gerçek Ürün Kataloğu (`WorkshopGallery.tsx` & `productsData.ts`):**
+   - `emeklastik.com.tr` üzerindeki gerçek ürün fotoğrafları, model kodları ve numara aralıkları:
+     - **EMEX İş Güvenliği Ayakkabı & Botları** (*İtalyan CA10, Milano YB107, Madrid S1030, M 1090-S2*)
+     - **ULAŞ PVC & Kauçuk Çizmeler** (*305-P Siyah Uzun, 307-P Sarı Çizme, 207-K Haki Krep Çizme, 320-P Peluşlu Çizme*)
+     - **EMEK, KURŞUN & UĞUR Lastik Ayakkabılar** (*101-A2, 101-A4 Kar Tipi, 101-B1, 101-C4*)
+     - **EMEK'S Keten & SEA WORLD Deniz Ayakkabıları** (*106-B12, 106-C3, 114-A1*)
+     - **MEYKERS Kışlık Kar Botları & EMEK EVA Terlik Grubu** (*18-08, 18-20*)
+   - Orijinal **E-Katalog PDF (`EmekLastik_Katalog.pdf`)** ve **Samsun TSO Başarı Hikayesi PDF (`Basari_Hikayesi.pdf`)** doğrudan indirme bağlantıları.
 
-2. **5.000+ Kalem Orijinal & OEM Yedek Parça Deposu + Canlı Şasi (VIN) Sorgu (`SparePartsSection.tsx`):**
-   - Atölyenin kendi yedek parça deposunun gerçek fotoğrafı ve raflardaki OEM markaların (*Mercedes-Benz Orijinal, Mann-Filter, Mahle, Wunder, Hella Pagid, Lemförder, BorgWarner, Bilstein*) kategori bazlı sunumu.
-   - Şasi numarası (VIN) veya parça adıyla doğrudan WhatsApp üzerinden stok ve fiyat sorgulama formu.
+2. **6 Ana Üretim Grubu & 14 Tescilli Marka (`Services.tsx` & `AboutWorkshop.tsx`):**
+   - Samsun OSB fabrika binasının gerçek fotoğrafı (`kurumsal.jpg`) ve 1961'den bugüne kurumsal tarihçesi.
+   - Emek Lastik bünyesindeki 14 tescilli markanın (`EMEK, EMEX, ULAŞ, ROTA, MEYKERS, EMEK'S, ELDİ, SEA WORLD, KURŞUN, UĞUR, YAYLA, EXMAX, EMEK KAUÇUK`) tanıtımı.
 
-3. **Canlı Gece Atölye Videosu & Gerçek Tesis Galerisi (`VideoSection.tsx`, `WorkshopGallery.tsx`):**
-   - İlerletilebilir zaman çubuklu (seek bar), ses ve tam ekran kontrollü özel gece atölye video oynatıcısı (`Automotive_repair_shop_at_night_20261012193207.mp4`).
-   - Atölyenin 4 adet gerçek fotoğrafı (Servis & Lift Sahası, Panoramik Müşteri Kabul Ofisi, VIP Bekleme Salonu ve Yedek Parça Deposu) ile ileri/geri geçişli tam ekran galeri.
+3. **Tek Sıra Kesintisiz Akan Müşteri & Bayi Yorumları (`ReviewRiver.tsx`):**
+   - Sağdan sola doğru tek sıra halinde nehir akışı şeklinde dönen ve fare imleci üzerine geldiğinde durmayan değerlendirme akışı.
 
-4. **Google Haritalar "Akan Nehir" Müşteri Yorumları (`ReviewRiver.tsx`):**
-   - Sağdan sola doğru kesintisiz nehir akışı şeklinde kayan gerçek Google yorumları.
-   - Üzerine gelindiğinde duraksama (pause-on-hover) ve tıklanarak detaylı incelenebilen modal pencere.
-   - **4.8 / 5.0** Google Haritalar puanı ve doğrulanmış müşteri rozetleri.
-
-5. **Kurucu Ustalarımız, SSS & Kusursuz İletişim (`AboutWorkshop.tsx`, `FaqSection.tsx`, `ContactSection.tsx`):**
-   - **Engin Çalımlı, Ercan Aycan ve Uğur Gözoğlu** liderliğinde 20+ yıllık Mercedes-Benz tecrübesi ve her ustaya özel doğrudan WhatsApp danışma bağlantısı.
-   - Acil & Danışma Hattı: **`0552 260 56 66`** | Sabit Santral: **`(0362) 260 56 66`**
-   - Adres: `İstiklal Mahallesi, 58. Sokak No:31/26, 19 Mayıs Sanayi Sitesi, 55330 Tekkeköy / Samsun`
-   - Google yerel SEO için `AutoRepair` & `AutoPartsStore` Schema.org JSON-LD yapılandırılmış veri desteği.
+4. **Merkez Fabrika & Bölge Bayilik İletişim (`ContactSection.tsx`):**
+   - **Fabrika Adresi:** Organize Sanayi Bölgesi, Vali Erdoğan Cebeci Bulvarı No:70 Kutlukent, Tekkeköy / SAMSUN
+   - **Telefon:** `+90 (362) 266 62 22` | **Faks:** `+90 (362) 266 66 99` | **E-Posta:** `emek@emeklastik.com.tr`
+   - **Gaziantep Bölge Bayii:** Çakmak Mah. Başak Sok. No:46 Şehitkamil / GAZİANTEP (`+90 342 323 60 53`)
 
 ---
 
-## 🛠️ Yerel Geliştirme (Local Development)
+## 🛠️ Yerel Geliştirme
 
 ```bash
-# Bağımlılıkları yükleyin
 npm install
-
-# Geliştirme sunucusunu başlatın
 npm run dev
-
-# Canlı üretim derlemesi oluşturun
 npm run build
 ```
-
----
-
-## 📞 Resmi İşletme Bilgileri
-- **Instagram:** [@dogusmercedes55](https://www.instagram.com/dogusmercedes55/)
-- **Google Maps:** [Doğuş Mercedes Servis ve Yedek Parça](https://maps.app.goo.gl/L96AQBgHhupn1F45A)
-- **GitHub Repo:** [CoskunerBerke/Dogus-Mercedes-55-Samsun](https://github.com/CoskunerBerke/Dogus-Mercedes-55-Samsun)
