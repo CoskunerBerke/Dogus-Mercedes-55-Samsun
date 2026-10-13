@@ -8,24 +8,31 @@ export default {
     extend: {
       colors: {
         mercedes: {
-          dark: '#0a0d12',
-          card: '#121721',
-          cardHover: '#18202d',
-          border: '#1f2937',
-          silver: '#e2e8f0',
+          obsidian: '#06080c',
+          dark: '#090d14',
+          surface: '#0e141f',
+          card: '#111826',
+          cardHover: '#162032',
+          border: '#1e293b',
+          chrome: '#f1f5f9',
+          silver: '#cbd5e1',
           muted: '#94a3b8',
-          accent: '#2563eb', // subtle precision blue
+          petronas: '#00d2be',
+          blue: '#38bdf8',
           gold: '#f59e0b',
-          star: '#00d26a',
         }
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        display: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
-        'river-scroll': 'riverScroll 45s linear infinite',
-        'river-scroll-reverse': 'riverScrollReverse 45s linear infinite',
+        'river-scroll': 'riverScroll 48s linear infinite',
+        'river-scroll-reverse': 'riverScrollReverse 52s linear infinite',
         'pulse-subtle': 'pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-slow': 'floatSlow 6s ease-in-out infinite',
+        'shimmer-sweep': 'shimmerSweep 3.5s ease-in-out infinite',
       },
       keyframes: {
         riverScroll: {
@@ -38,7 +45,15 @@ export default {
         },
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.7' },
+          '50%': { opacity: '0.65' },
+        },
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+        shimmerSweep: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
         }
       }
     },
