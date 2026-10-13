@@ -1,160 +1,75 @@
 import React from 'react';
-import { Phone, MessageCircle, Navigation, ShieldCheck, Wrench, Clock, Star } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 py-10 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Column: Clear Light-Theme Presentation */}
-          <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider mb-5">
-              <ShieldCheck className="w-4 h-4 text-blue-700" />
-              Samsun Tekkeköy 19 Mayıs Sanayi Sitesi • 7/24 Yol Yardım
-            </div>
+    <section className="relative min-h-[82vh] flex items-center bg-slate-950 overflow-hidden">
+      {/* Full-Screen Continuous Background Video (No controls, seamless loop) */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/images/workshop-exterior.png"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.02] pointer-events-none"
+      >
+        <source src="/Automotive_repair_shop_at_night_20261012193207.mp4" type="video/mp4" />
+      </video>
 
-            <h1 className="font-display text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.12] mb-4">
-              DOĞUŞ MERCEDES <span className="text-blue-700">SAMSUN</span>
-              <span className="block text-xl sm:text-2xl font-bold text-slate-700 mt-2">
-                Mercedes-Benz Özel Servis &amp; Orijinal Yedek Parça
-              </span>
-            </h1>
+      {/* Scientific High-Contrast Dark Gradient Overlay (like Screenshot 3) */}
+      <div className="absolute inset-0 bg-slate-950/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/40" />
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-4">
-              Kurucu ustalarımız <strong className="text-slate-900">Engin Çalımlı, Ercan Aycan ve Uğur Gözoğlu</strong> yönetiminde; binek ve hafif ticari tüm Mercedes-Benz araçlar için bilgisayarlı arıza tespiti, garantili mekanik bakım ve geniş orijinal yedek parça stoğuyla hizmetinizdeyiz.
-            </p>
+      {/* Content Container */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+        <div className="max-w-3xl">
+          <h1 className="font-display text-4xl sm:text-6xl font-bold text-white tracking-tight leading-[1.08] mb-5">
+            Samsun ve Karadeniz&apos;de Mercedes-Benz araçlar için{' '}
+            <span className="bg-gradient-to-r from-sky-300 via-teal-200 to-emerald-300 bg-clip-text text-transparent">
+              garantili özel servis
+            </span>
+          </h1>
 
-            {/* Google Rating Highlight Pill */}
-            <div className="inline-flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-4 py-2.5 shadow-xs mb-6">
-              <div className="flex items-center gap-0.5 text-amber-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="text-sm font-bold text-slate-900">4.8 / 5 Google Puanı</span>
-              <span className="text-xs text-slate-500 font-semibold border-l border-slate-200 pl-3">
-                Bireysel &amp; Kurumsal Filo Tercihi
-              </span>
-            </div>
+          <p className="text-base sm:text-lg text-slate-200 leading-relaxed mb-8 max-w-2xl">
+            Kurucu ustalarımız <strong className="text-white">Engin Çalımlı, Ercan Aycan ve Uğur Gözoğlu</strong> yönetiminde; lisanslı Xentry bilgisayarlı arıza tespiti, kendi depomuzdan orijinal yedek parça ve kurumsal filo bakımı.
+          </p>
 
-            {/* Direct CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <a
-                href="tel:+905522605666"
-                className="flex items-center justify-center gap-2.5 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3.5 rounded-lg text-base transition-colors shadow-sm"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Hemen Ara: 0552 260 56 66</span>
-              </a>
+          {/* Two Clean Action Buttons (Matching Screenshot 3 style) */}
+          <div className="flex flex-wrap items-center gap-3.5 mb-6">
+            <a
+              href="https://wa.me/905522605666?text=Merhaba%20Do%C4%9Fu%C5%9F%20Mercedes%20Samsun%2C%20arac%C4%B1m%20i%C3%A7in%20bak%C4%B1m%20ve%20par%C3%A7a%20fiyat%20teklifi%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-4 rounded-xl text-sm sm:text-base transition-colors shadow-lg"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>Ücretsiz Fiyat &amp; Randevu Al</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
 
-              <a
-                href="https://wa.me/905522605666?text=Merhaba%20Do%C4%9Fu%C5%9F%20Mercedes%20Samsun%2C%20servis%20randevusu%20ve%20par%C3%A7a%20fiyat%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-lg text-base transition-colors shadow-sm"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp Randevu &amp; Parça</span>
-              </a>
+            <a
+              href="tel:+905522605666"
+              className="inline-flex items-center gap-2.5 bg-slate-900/75 hover:bg-slate-900 text-white font-bold px-6 py-4 rounded-xl text-sm sm:text-base transition-colors border border-white/20 backdrop-blur-md"
+            >
+              <Phone className="w-4 h-4 text-sky-300" />
+              <span>0552 260 56 66 • Hemen Ara</span>
+            </a>
 
-              <a
-                href="https://maps.app.goo.gl/L96AQBgHhupn1F45A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-bold px-5 py-3.5 rounded-lg text-base transition-colors border border-slate-300 shadow-xs"
-              >
-                <Navigation className="w-5 h-5 text-blue-700" />
-                <span>Yol Tarifi</span>
-              </a>
-            </div>
-
-            {/* Key Facts Bar */}
-            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-slate-200">
-              <div className="bg-white border border-slate-200 rounded-lg p-3 shadow-2xs">
-                <div className="flex items-center gap-1.5 text-blue-700 font-bold text-xs uppercase mb-0.5">
-                  <Wrench className="w-3.5 h-3.5" />
-                  Xentry Teşhis
-                </div>
-                <div className="text-xs text-slate-600 font-medium">
-                  Lisanslı Mercedes Cihazı ile Nokta Tespit
-                </div>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-3 shadow-2xs">
-                <div className="flex items-center gap-1.5 text-blue-700 font-bold text-xs uppercase mb-0.5">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  Hazır Stok
-                </div>
-                <div className="text-xs text-slate-600 font-medium">
-                  Orijinal &amp; OEM Yedek Parça Deposu
-                </div>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-lg p-3 shadow-2xs">
-                <div className="flex items-center gap-1.5 text-blue-700 font-bold text-xs uppercase mb-0.5">
-                  <Clock className="w-3.5 h-3.5" />
-                  Aynı Gün Teslim
-                </div>
-                <div className="text-xs text-slate-600 font-medium">
-                  Bireysel ve Kurumsal Filo Bakımı
-                </div>
-              </div>
-            </div>
+            <a
+              href="#hizmetler"
+              className="inline-flex items-center gap-2 bg-slate-900/60 hover:bg-slate-900/90 text-slate-200 font-semibold px-5 py-4 rounded-xl text-sm sm:text-base transition-colors border border-white/15 backdrop-blur-md"
+            >
+              <span>Hizmetleri İncele</span>
+            </a>
           </div>
 
-          {/* Right Column: Autoplaying Workshop Video + Exterior Card */}
-          <div className="lg:col-span-6 space-y-4">
-            <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md">
-              <div className="bg-slate-100 px-4 py-2.5 border-b border-slate-200 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-                    DOĞUŞ MERCEDES SAMSUN — SERVİS &amp; ATÖLYE VİDEOSU
-                  </span>
-                </div>
-                <span className="text-[11px] font-semibold text-blue-700">
-                  Tekkeköy 19 Mayıs Sanayi
-                </span>
-              </div>
-              <div className="relative aspect-video bg-slate-900">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  controls
-                  poster="/images/workshop-exterior.png"
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/Automotive_repair_shop_at_night_20261012193207.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-
-            {/* Bottom Dual Mini Showcase: Exterior + Spare Parts Warehouse */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center gap-3 shadow-xs">
-                <img
-                  src="/images/workshop-exterior.png"
-                  alt="Doğuş Mercedes Samsun Servis Binası"
-                  className="w-20 h-14 object-cover object-[56%_center] rounded-lg border border-slate-200 shrink-0"
-                />
-                <div>
-                  <div className="text-xs font-bold text-slate-900">19 Mayıs Sanayi Sitesi</div>
-                  <p className="text-[11px] text-slate-600">58. Sokak No:31/26 Tekkeköy</p>
-                </div>
-              </div>
-
-              <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center gap-3 shadow-xs">
-                <img
-                  src="/images/spare-parts.jpg"
-                  alt="Doğuş Mercedes Orijinal Yedek Parça Deposu"
-                  className="w-20 h-14 object-cover rounded-lg border border-slate-200 shrink-0"
-                />
-                <div>
-                  <div className="text-xs font-bold text-slate-900">Kendi Parça Depomuz</div>
-                  <p className="text-[11px] text-slate-600">Beklemeden Orijinal Parça</p>
-                </div>
-              </div>
-            </div>
+          {/* Trust Footnote Line (Matching Screenshot 3 bottom-left note) */}
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-300 font-medium">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>
+              4.8/5 Google Puanı • Orijinal &amp; Alman OEM Parça Stoğu • 7/24 Acil Yol Yardım
+            </span>
           </div>
         </div>
       </div>
