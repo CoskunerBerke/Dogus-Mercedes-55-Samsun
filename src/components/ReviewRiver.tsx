@@ -3,10 +3,11 @@ import { reviewsList } from '../data/reviewsData';
 import { Star, ExternalLink } from 'lucide-react';
 
 export const ReviewRiver: React.FC = () => {
-  const featuredReviews = reviewsList.slice(0, 6);
+  // Duplicate array so -50% translateX creates a seamless infinite loop
+  const riverStream = [...reviewsList, ...reviewsList];
 
   return (
-    <section id="yorumlar" className="py-20 bg-[#0e1014] border-b border-zinc-800">
+    <section id="yorumlar" className="py-20 bg-[#0e1014] border-b border-zinc-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-6 border-b border-zinc-800">
@@ -23,7 +24,7 @@ export const ReviewRiver: React.FC = () => {
             href="https://maps.app.goo.gl/L96AQBgHhupn1F45A"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-[#14171c] border border-zinc-800 hover:border-zinc-600 transition-colors"
+            className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-[#14171c] border border-zinc-800 hover:border-zinc-600 transition-colors shrink-0"
           >
             <div className="flex items-center gap-1 text-amber-400">
               {[...Array(5)].map((_, i) => (
@@ -34,13 +35,15 @@ export const ReviewRiver: React.FC = () => {
             <ExternalLink className="w-4 h-4 text-zinc-400" />
           </a>
         </div>
+      </div>
 
-        {/* Clean 6-Card Grid (No dizzying marquee) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredReviews.map((review) => (
+      {/* Single Row Continuous River Flowing Right-to-Left (Never stops on hover) */}
+      <div className="relative w-full overflow-hidden river-mask">
+        <div className="flex gap-6 w-max animate-river-continuous py-2">
+          {riverStream.map((review, idx) => (
             <div
-              key={review.id}
-              className="p-6 rounded-xl bg-[#14171c] border border-zinc-800 flex flex-col justify-between"
+              key={`${review.id}-${idx}`}
+              className="w-[340px] sm:w-[400px] p-6 rounded-xl bg-[#14171c] border border-zinc-800 flex flex-col justify-between shrink-0 select-none"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
@@ -48,7 +51,7 @@ export const ReviewRiver: React.FC = () => {
                     <h4 className="text-base font-bold text-white">{review.author}</h4>
                     <span className="text-xs text-zinc-400">{review.carModel}</span>
                   </div>
-                  <div className="flex text-amber-400">
+                  <div className="flex text-amber-400 shrink-0">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     ))}
