@@ -1,123 +1,114 @@
 import React from 'react';
-import { FileText, Phone } from 'lucide-react';
+import { Building2, ShieldCheck, Globe2, Truck } from 'lucide-react';
 
 export const AboutWorkshop: React.FC = () => {
+  const partnerSectors = [
+    {
+      title: 'Belediyeler & Kamu Kurumları',
+      desc: 'Türkiye genelindeki belediyelerin fen işleri, park-bahçe ve temizlik işleri müdürlükleri için iş çizmesi ve koruyucu bot tedariği.'
+    },
+    {
+      title: 'İnşaat, Maden & Enerji Şantiyeleri',
+      desc: 'Büyük ölçekli şantiyeler ve sanayi tesisleri için S1/S2 standartlarında EMEX çelik burunlu iş güvenliği ayakkabıları.'
+    },
+    {
+      title: 'Tarım Kredi & Ziraat Bayileri',
+      desc: 'Karadeniz, İç Anadolu, Doğu ve Güneydoğu Anadolu başta olmak üzere 81 ilde tarım, hayvancılık ve bahçe çizmeleri.'
+    },
+    {
+      title: '81 İl Toptan Ayakkabı Dağıtıcıları',
+      desc: 'Samsun Merkez Fabrika ve Gaziantep Bölge Bayiliğimiz üzerinden yüzlerce toptan satış noktasına düzenli sevkiyat.'
+    },
+    {
+      title: 'Kauçuk & Otomotiv Yan Sanayi',
+      desc: 'Fabrikalar ve kauçuk üreticileri için yüksek kaliteli rejenere kauçuk, granül ve toz lastik hammadde üretimi.'
+    },
+    {
+      title: '18 Ülkede Uluslararası İthalatçılar',
+      desc: 'Avrupa, Balkanlar, Orta Doğu ve Türk Cumhuriyetleri’ndeki kurumsal distribütörlere doğrudan fabrika ihracatı.'
+    }
+  ];
+
   const brands = [
     { name: 'EMEK', type: 'Lastik & Plastik Ayakkabı' },
-    { name: 'EMEX', type: 'Deri & Süet İş Güvenliği Ayakkabısı' },
+    { name: 'EMEX', type: 'İş Güvenliği Ayakkabısı' },
     { name: 'ULAŞ', type: 'PVC & Krep İş Çizmesi' },
     { name: 'ROTA', type: 'Kauçuk Çizme' },
-    { name: 'MEYKERS', type: 'Spor Ayakkabı & Kar Botları' },
-    { name: "EMEK'S", type: 'Keten Ayakkabı Grubu' },
+    { name: 'MEYKERS', type: 'Spor & Kışlık Kar Botu' },
+    { name: "EMEK'S", type: 'Keten Ayakkabı' },
     { name: 'ELDİ & EVA', type: 'Poliüretan & EVA Terlik' },
-    { name: 'SEA WORLD', type: 'Kaymaz Deniz Ayakkabısı' },
-    { name: 'KURŞUN & UĞUR', type: 'Geleneksel & Bezli Ayakkabı' },
-    { name: 'YAYLA & EFE', type: 'Plastik & PVC Ayakkabı' },
-    { name: 'EXMAX', type: 'Halı Saha Ayakkabısı' },
-    { name: 'EMEK KAUÇUK', type: 'Rejenere Kauçuk & Granül' }
+    { name: 'SEA WORLD', type: 'Deniz Ayakkabısı' },
+    { name: 'KURŞUN', type: 'Lastik Ayakkabı' },
+    { name: 'UĞUR & ÇİFTÇİ', type: 'Bezli Ayakkabı' },
+    { name: 'YAYLA & EFE', type: 'Plastik Ayakkabı' },
+    { name: 'EMEK KAUÇUK', type: 'Rejenere Kauçuk' }
   ];
 
   return (
-    <section id="kurumsal" className="py-20 bg-[#0e1014] border-b border-zinc-800">
+    <section id="markalar" className="py-16 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        {/* Top Row: Factory Story & Real Factory Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-16 border-b border-zinc-800">
-          {/* Left Narrative */}
-          <div className="lg:col-span-6">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-500 mb-2">
-              KURUMSAL TARİHÇEMİZ
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-6">
-              1961’den Bugüne Üreten Türkiye’nin Köklü Markası
-            </h2>
-
-            <p className="text-base text-zinc-300 leading-relaxed mb-4">
-              <strong className="text-white">Emek Lastik Fabrikası</strong>, 1961 yılında <strong className="text-white">Doğan ELDEMİR</strong> tarafından Samsun’da kurulmuş olup, 1992 senesinde anonim şirkete dönüşmüştür.
-            </p>
-
-            <p className="text-base text-zinc-400 leading-relaxed mb-4">
-              Üretime başladığımız yıllardan itibaren müşteri memnuniyeti ve kaliteli mal üretiminde gösterdiğimiz disiplin ve özenden dolayı Emek Lastik, bugün <strong className="text-zinc-200">18 ülkeye ihracat</strong> yaparak yurt dışında Türkiye’yi en iyi şekilde temsil eden bir sanayi kuruluşu olmuştur.
-            </p>
-
-            <p className="text-base text-zinc-400 leading-relaxed mb-8">
-              Fabrikamız; iş güvenliği ayakkabısı, PVC çizme, krep ve kauçuk çizme, lastik ve astarlı lastik ayakkabı, keten ayakkabı, poliüretan ve EVA terlik, fermuarlı kar botu, deniz ayakkabısı ve rejenere kauçuk imalatına <strong className="text-zinc-200">13.000 m²’si kapalı olmak üzere toplam 20.000 m²’lik</strong> modern tesisinde devam etmektedir.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="/emek/Basari_Hikayesi.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 font-bold text-sm transition-colors"
-              >
-                <FileText className="w-4 h-4 text-red-500" />
-                <span>Samsun TSO Başarı Hikayesi (PDF)</span>
-              </a>
-
-              <a
-                href="tel:+903622666222"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-white hover:bg-zinc-200 text-black font-extrabold text-sm transition-colors"
-              >
-                <Phone className="w-4 h-4 fill-current" />
-                <span>Fabrika İletişim</span>
-              </a>
+        {/* Part 1: Official 14 Brands Strip */}
+        <div className="mb-14">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-widest text-red-600 mb-1">
+                TESCİLLİ MARKALARIMIZ & İŞ ORTAKLARIMIZ
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                Emek Lastik Bünyesindeki 14 Marka ve Çözüm Ortaklarımız
+              </h2>
             </div>
+            <span className="text-xs font-bold text-slate-500">
+              Yerli Üretim • 81 İl Bayi Ağı • 18 Ülke İhracat
+            </span>
           </div>
 
-          {/* Right Factory Photo */}
-          <div className="lg:col-span-6">
-            <div className="rounded-xl overflow-hidden border border-zinc-800 bg-[#14171c]">
-              <img
-                src="/emek/kurumsal.jpg"
-                alt="Emek Lastik Samsun Organize Sanayi Bölgesi Fabrika Binası"
-                className="w-full h-auto object-cover"
-              />
-              <div className="p-5 flex items-center justify-between gap-4 border-t border-zinc-800">
-                <div>
-                  <h3 className="text-base font-bold text-white">
-                    Emek Lastik ve Plastik Ayakkabı San. ve Tic. A.Ş.
-                  </h3>
-                  <p className="text-xs text-zinc-400 mt-0.5">
-                    Samsun Organize Sanayi Bölgesi • 20.000 m² Entegre Üretim Tesisi
-                  </p>
-                </div>
-                <span className="text-xs font-mono font-bold px-3 py-1 rounded bg-zinc-900 border border-zinc-700 text-zinc-300 shrink-0">
-                  SINCE 1961
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Row: Official Sub-Brands (#markalar) */}
-        <div id="markalar" className="pt-16">
-          <div className="mb-8">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-500 mb-2">
-              MARKA AİLEMİZ
-            </p>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Emek Lastik Bünyesindeki Tescilli Markalarımız
-            </h3>
-          </div>
-
-          {/* Official Logos Banner from emeklastik.com.tr */}
-          <div className="bg-white rounded-xl p-4 mb-8 border border-zinc-200 overflow-x-auto">
+          {/* Original Brand Logos Strip */}
+          <div className="bg-white rounded-xl p-5 mb-6 border border-slate-200 shadow-sm overflow-x-auto">
             <img
               src="/emek/logolar.jpg"
               alt="Emek Lastik Tescilli Markaları"
-              className="min-w-[720px] w-full h-auto object-contain mx-auto"
+              className="min-w-[750px] w-full h-auto object-contain mx-auto"
             />
           </div>
 
-          {/* Clean Brand Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* Clean Brand Badges */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {brands.map((b) => (
               <div
                 key={b.name}
-                className="p-4 rounded-xl bg-[#14171c] border border-zinc-800"
+                className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-center"
               >
-                <div className="text-base font-extrabold text-white">{b.name}</div>
-                <div className="text-xs text-zinc-400 mt-0.5">{b.type}</div>
+                <div className="text-sm font-black text-slate-900">{b.name}</div>
+                <div className="text-[11px] font-medium text-slate-500 mt-0.5">{b.type}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Part 2: Partner Companies & Supplied Sectors */}
+        <div className="pt-12 border-t border-slate-200">
+          <div className="mb-8">
+            <p className="text-xs font-extrabold uppercase tracking-widest text-red-600 mb-1">
+              ÇALIŞILAN FİRMALAR & TEDARİK SAĞLANAN KURUMLAR
+            </p>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Türkiye ve Dünyada Birlikte Çalıştığımız Sektörler
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {partnerSectors.map((sector) => (
+              <div
+                key={sector.title}
+                className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-colors"
+              >
+                <h4 className="text-base font-extrabold text-slate-900 mb-2">
+                  {sector.title}
+                </h4>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {sector.desc}
+                </p>
               </div>
             ))}
           </div>

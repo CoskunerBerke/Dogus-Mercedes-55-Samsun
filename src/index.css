@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#0b0c0e] text-zinc-100 font-sans antialiased selection:bg-white selection:text-black;
+    @apply bg-white text-slate-900 font-sans antialiased selection:bg-red-600 selection:text-white;
   }
 
   h1, h2, h3, h4, .font-display {
@@ -12,25 +12,26 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Light Theme */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0c0e;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #94a3b8;
 }
 
 /* Smooth fade on left/right edges of the review river */
 .river-mask {
-  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 @keyframes riverFlow {
@@ -43,6 +44,6 @@
 }
 
 .animate-river-continuous {
-  animation: riverFlow 55s linear infinite;
+  animation: riverFlow 50s linear infinite;
   will-change: transform;
 }
