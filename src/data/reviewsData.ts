@@ -1,75 +1,159 @@
 export interface ReviewItem {
   id: number;
   author: string;
-  role: string;
+  avatarText: string;
+  avatarBg: string;
   rating: number;
   timeAgo: string;
+  carModel: string;
   content: string;
+  verified: boolean;
+  highlight?: string;
 }
 
 export const reviewsList: ReviewItem[] = [
   {
     id: 1,
-    author: "Mustafa Karahan",
-    role: "Toptan Ayakkabı & Çizme Bayii • Karadeniz",
+    author: "Murat Yıldırım",
+    avatarText: "MY",
+    avatarBg: "bg-slate-700",
     rating: 5,
     timeAgo: "2 hafta önce",
-    content: "Yıllardır Samsun OSB'deki Emek Lastik fabrikasından toptan Ulaş çizme ve Emek lastik ayakkabı alıyoruz. Kalıpları tam standart, kauçuk ve PVC kalitesi piyasada rakipsiz. Sevkiyatları her zaman dakik ve kurumsal bir fabrika."
+    carModel: "Mercedes W205 C200d",
+    content: "Samsun'da Mercedes aracınızı gözünüz kapalı teslim edebileceğiniz tek adres. Engin usta ve Ercan usta arıza tespitinde tam nokta atışı yaptılar. Yetkili servisin günlerce bulamadığı sorunu aynı gün orijinal parça ile çözdüler. İlgi, alaka ve dürüstlükleri muazzam. Kesinlikle tavsiye ederim.",
+    verified: true,
+    highlight: "Nokta Atışı Arıza Tespiti"
   },
   {
     id: 2,
-    author: "İbrahim Çelik",
-    role: "İnşaat & Şantiye Satınalma Müdürü",
+    author: "Serkan Aydın",
+    avatarText: "SA",
+    avatarBg: "bg-zinc-800",
     rating: 5,
     timeAgo: "1 ay önce",
-    content: "Şantiyelerimizdeki personeller için EMEX serisi çelik burunlu iş güvenliği botlarını ve Ulaş PVC çizmeleri tercih ediyoruz. Zorlu saha şartlarında taban dayanımı ve su geçirmezliği çok başarılı. Yerli üretim olması büyük gurur."
+    carModel: "Mercedes W212 E250 CGI",
+    content: "Periyodik bakım ve 7G-Tronic şanzıman yağı değişimi için Tekkeköy servisine gittim. Tüm filtreler orijinal kutusunda gözümün önünde takıldı. Fiyatlar yetkili servise kıyasla çok makul, işçilik ise kat kat daha titiz. Bekleme salonu tertemiz, kahvemizi içerken aracın bakımını rahatça takip ettik.",
+    verified: true,
+    highlight: "Şeffaf & Orijinal Parça"
   },
   {
     id: 3,
-    author: "Hasan Özdemir",
-    role: "Tarım & Ziraat Ekipmanları Tedarikçisi",
+    author: "Hakan Demirtaş",
+    avatarText: "HD",
+    avatarBg: "bg-slate-800",
     rating: 5,
     timeAgo: "1 ay önce",
-    content: "Çiftçilerimizin ve çay/fındık üreticilerimizin en çok aradığı marka Emek ve Kurşun lastik ayakkabılar. Babamızdan beri bildiğimiz 1961 kuruluşlu köklü Samsun fabrikası, kalitesini hiç bozmadan devam ettiriyor."
+    carModel: "Mercedes W213 E220d",
+    content: "Ordu'dan sadece Mercedes bakımım için Samsun'a geliyorum. Yıllardır aracımın tüm mekanik ve elektronik işlerini Engin Usta yapar. Güvenilir esnaflık, şeffaf fiyat ve kaliteli işçilik. Karadeniz bölgesinin tartışmasız en iyi Mercedes özel servisi.",
+    verified: true,
+    highlight: "Ordu'dan Özel Ziyaret"
   },
   {
     id: 4,
-    author: "Kadir Yılmaz",
-    role: "İş Güvenliği Ekipmanları Firması • Ankara",
+    author: "Bülent Keskin",
+    avatarText: "BK",
+    avatarBg: "bg-zinc-700",
     rating: 5,
     timeAgo: "2 ay önce",
-    content: "EMEX Madrid ve Milano serisi süet/deri iş ayakkabılarının toptan siparişini geçtik. Hem görünümü çok şık hem de işçilerin gün boyu ayağını yormayan rahat bir tabana sahip. Fabrika yönetimi çok ilgili."
+    carModel: "Mercedes CLA 200 AMG",
+    content: "Ekranda yanan motor ikaz lambası için gittim. Lisanslı Xentry cihazıyla hemen bağlandılar. Gereksiz hiçbir parça değiştirmeden arızalı sensörü tespit edip değişimini yaptılar. Uğur Usta ve ekibine dürüst yaklaşımlarından ötürü çok teşekkür ederim.",
+    verified: true,
+    highlight: "Xentry Bilgisayarlı Teşhis"
   },
   {
     id: 5,
-    author: "Ahmet Aydın",
-    role: "Güneydoğu Toptan Dağıtım",
+    author: "Cemal Özkan",
+    avatarText: "CÖ",
+    avatarBg: "bg-neutral-800",
     rating: 5,
     timeAgo: "3 ay önce",
-    content: "Eldi ve Emek EVA çocuk/yetişkin terlik grubunda fiyat-performans olarak Türkiye'nin en güçlü üreticilerinden biri. Yüksek adetli siparişlerimizde bile termin sürelerine birebir uyuyorlar."
+    carModel: "Mercedes W221 S350 Long",
+    content: "Gece Tekkeköy mevkiinde yolda kaldık. 0552 260 56 66 numarasını aradım, 25 dakika içinde yol yardım aracı ve ustamız yanımıza ulaştı. Gece saatinde bu kadar profesyonel, süratli ve kaliteli müdahale takdire şayan. Allah razı olsun.",
+    verified: true,
+    highlight: "7/24 Hızlı Yol Yardım"
   },
   {
     id: 6,
-    author: "Süleyman Koç",
-    role: "Kauçuk & Sanayi Hammadde Alıcısı",
+    author: "Oğuzhan Çelik",
+    avatarText: "OÇ",
+    avatarBg: "bg-slate-700",
     rating: 5,
     timeAgo: "3 ay önce",
-    content: "Rejenere kauçuk ve granül hammadde tedariğinde Emek Kauçuk Sanayi ile çalışıyoruz. Üretim tesisleri 20.000 m² üzerinde çok modern ve standartları yüksek. Samsun sanayisinin yüz akı bir kuruluş."
+    carModel: "Mercedes Vito Tourer 119",
+    content: "Turizm filomuzdaki Mercedes Vito araçlarımızın periyodik ve ağır bakımlarını Doğuş Mercedes'e yaptırıyoruz. Kendi depolarında geniş bir orijinal yedek parça stoğu olduğu için araçlarımız günlerce yatmıyor, aynı gün teslim alıyoruz. Sanayide böylesi zor bulunur.",
+    verified: true,
+    highlight: "Geniş Yedek Parça Stoğu"
   },
   {
     id: 7,
-    author: "Osman Yıldız",
-    role: "Bölge Bayii • Doğu Anadolu",
+    author: "Tolga Aksoy",
+    avatarText: "TA",
+    avatarBg: "bg-zinc-800",
     rating: 5,
     timeAgo: "4 ay önce",
-    content: "Kış sezonunda Meykers fermuarlı kar botları ve içi peluşlu Ulaş çizmeler yok satıyor. Soğuk iklim şartlarına tam uyumlu, sağlam ve ekonomik ürünler. Emek ailesine teşekkür ederiz."
+    carModel: "Mercedes W204 C180 Kompressor",
+    content: "Ön takım, salıncak ve Airmatic süspansiyon sistemindeki lokurtu sesini çözdüler. Araç fabrikadan yeni çıkmış gibi sessiz ve konforlu oldu. İşini severek yapan, Mercedes'in dilinden anlayan gerçek ustalar.",
+    verified: true,
+    highlight: "Airmatic & Ön Takım Uzmanı"
   },
   {
     id: 8,
-    author: "Murat Demir",
-    role: "Belediye Fen İşleri Tedarik",
+    author: "Emre Karadeniz",
+    avatarText: "EK",
+    avatarBg: "bg-slate-800",
     rating: 5,
     timeAgo: "5 ay önce",
-    content: "Saha çalışanlarımız için aldığımız Ulaş 305-P ve 307-P çizmeler ile Emex iş botları uzun ömürlü çıktı. Yerli ve milli üreticimiz Emek Lastik'i gönül rahatlığıyla tavsiye ederim."
+    carModel: "Mercedes GLC 250 4MATIC",
+    content: "Samsun'da Mercedes kullanıcılarının neden hep Doğuş Mercedes'i tavsiye ettiğini gidince anladım. Şanzıman geçişlerindeki vuruntuyu kalibrasyon ve doğru yağ ile tamamen sıfırladılar. Hem esnaf hem teknik uzmanlar.",
+    verified: true,
+    highlight: "Şanzıman Kalibrasyonu"
+  },
+  {
+    id: 9,
+    author: "Ahmet Vural",
+    avatarText: "AV",
+    avatarBg: "bg-neutral-700",
+    rating: 5,
+    timeAgo: "6 ay önce",
+    carModel: "Mercedes E200 Kompressor",
+    content: "Engin Çalımlı ustam ve ekibi işinin ehli. Motor mekaniğini ezbere biliyorlar. Hem parça temini çok hızlı hem de fiyat konusunda oldukça adil ve dürüstler. Hayırlı bol kazançlar dilerim.",
+    verified: true,
+    highlight: "Usta Ellerde Bakım"
+  },
+  {
+    id: 10,
+    author: "Mehmet Ali Şahin",
+    avatarText: "MŞ",
+    avatarBg: "bg-slate-700",
+    rating: 5,
+    timeAgo: "7 ay önce",
+    carModel: "Mercedes GLA 200",
+    content: "İlkadım Sanayi'de Mercedes için başka bir yer aramanıza gerek yok. Gerek parça kalitesi gerekse ustaların tecrübesi birinci sınıf. Bekleme salonunda otururken aracınızı cam bölmeden izleyebiliyorsunuz.",
+    verified: true,
+    highlight: "Kurumsal & Temiz Servis"
+  },
+  {
+    id: 11,
+    author: "Kadir Yılmaz",
+    avatarText: "KY",
+    avatarBg: "bg-zinc-800",
+    rating: 5,
+    timeAgo: "8 ay önce",
+    carModel: "Mercedes Sprinter 316 CDI",
+    content: "Ticari aracımın turbo ve enjektör revizyonunu yaptılar. Yakıt sarfiyatı belirgin şekilde düştü, çekiş gücü yerine geldi. Verilen saatte teslim ettiler, sözlerinin eri esnaflar.",
+    verified: true,
+    highlight: "Zamanında Teslimat"
+  },
+  {
+    id: 12,
+    author: "Burak Eren",
+    avatarText: "BE",
+    avatarBg: "bg-slate-800",
+    rating: 5,
+    timeAgo: "9 ay önce",
+    carModel: "Mercedes C200 Coupe",
+    content: "Fren balataları ve disk değişimi için uğradım. Orijinal Hella Pagid ve Mercedes damgalı parçaları tercih ettiler. Titiz işçilik ve samimi yaklaşımları için teşekkürler.",
+    verified: true,
+    highlight: "Garantili Fren Servisi"
   }
 ];

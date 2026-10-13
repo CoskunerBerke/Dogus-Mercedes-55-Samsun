@@ -3,8 +3,8 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutWorkshop } from './components/AboutWorkshop';
 import { ReviewRiver } from './components/ReviewRiver';
-import { WorkshopGallery } from './components/WorkshopGallery';
 import { Services } from './components/Services';
+import { WorkshopGallery } from './components/WorkshopGallery';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { MobileQuickBar } from './components/MobileQuickBar';
@@ -17,8 +17,8 @@ export function App() {
         <Hero />
         <AboutWorkshop />
         <ReviewRiver />
-        <WorkshopGallery />
         <Services />
+        <WorkshopGallery />
         <ContactSection />
       </main>
       <Footer />
