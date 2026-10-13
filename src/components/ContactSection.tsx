@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Clock, Navigation, MessageCircle, Instagram } from 'lucide-react';
+import { Phone, MapPin, Clock, Navigation, MessageCircle, ExternalLink } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
   const [carModel, setCarModel] = useState('');
@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-bold py-3 px-4 rounded-lg text-sm transition-colors border border-slate-300"
                 >
-                  <Instagram className="w-4 h-4 text-blue-700" />
+                  <ExternalLink className="w-4 h-4 text-blue-700" />
                   @dogusmercedes55
                 </a>
               </div>

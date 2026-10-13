@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Instagram } from 'lucide-react';
+import { Phone, MapPin, ExternalLink } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-slate-900 hover:text-blue-700 font-bold bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-2xs transition-colors"
             >
-              <Instagram className="w-4 h-4 text-blue-700" />
+              <ExternalLink className="w-4 h-4 text-blue-700" />
               @dogusmercedes55
             </a>
           </div>
