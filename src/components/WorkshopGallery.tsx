@@ -53,7 +53,7 @@ export const WorkshopGallery: React.FC = () => {
               key={photo.title}
               className="group bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-xs hover:border-black transition-colors"
             >
-              <div className="aspect-16/10 w-full overflow-hidden bg-neutral-100">
+              <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-100">
                 <img
                   src={photo.src}
                   alt={photo.title}
