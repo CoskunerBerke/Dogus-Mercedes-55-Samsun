@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-slate-900 font-sans antialiased selection:bg-red-600 selection:text-white;
+    @apply bg-white text-black font-sans antialiased selection:bg-black selection:text-white;
   }
 
   h1, h2, h3, h4, .font-display {
@@ -12,20 +12,20 @@
   }
 }
 
-/* Custom scrollbar - Light Theme */
+/* Custom scrollbar - Monochrome Theme */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #f5f5f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #a3a3a3;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #525252;
 }
 
 /* Smooth fade on left/right edges of the review river */

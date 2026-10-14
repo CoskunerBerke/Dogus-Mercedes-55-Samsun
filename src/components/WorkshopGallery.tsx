@@ -1,4 +1,5 @@
 import React from 'react';
+import { MercedesLogo } from './MercedesLogo';
 
 const photos = [
   {
@@ -29,18 +30,19 @@ const photos = [
 
 export const WorkshopGallery: React.FC = () => {
   return (
-    <section id="servisimiz" className="py-16 md:py-20 bg-slate-50 border-b border-slate-200">
+    <section id="servisimiz" className="py-16 md:py-20 bg-neutral-50 border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <div className="text-blue-700 text-xs font-bold uppercase tracking-widest mb-2">
-              GERÇEK SERVİS &amp; STOK GÖRÜNTÜLERİ
+            <div className="inline-flex items-center gap-2 text-black text-xs font-bold uppercase tracking-widest mb-2">
+              <MercedesLogo className="w-4 h-4" variant="dark" />
+              <span>GERÇEK SERVİS &amp; STOK GÖRÜNTÜLERİ</span>
             </div>
-            <h2 className="font-display text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+            <h2 className="font-display text-2xl sm:text-4xl font-bold text-black tracking-tight">
               Servisimizden ve Yedek Parça Depomuzdan Kareler
             </h2>
           </div>
-          <p className="text-slate-600 text-sm max-w-md">
+          <p className="text-neutral-600 text-sm max-w-md">
             Samsun Tekkeköy 19 Mayıs Sanayi Sitesi&apos;ndeki tesisimiz, yedek parça depomuz ve müşteri ağırlama alanlarımız.
           </p>
         </div>
@@ -49,9 +51,9 @@ export const WorkshopGallery: React.FC = () => {
           {photos.map((photo) => (
             <div
               key={photo.title}
-              className="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs hover:border-blue-400 transition-colors"
+              className="group bg-white border border-neutral-200 rounded-xl overflow-hidden shadow-xs hover:border-black transition-colors"
             >
-              <div className="aspect-16/10 w-full overflow-hidden bg-slate-100">
+              <div className="aspect-16/10 w-full overflow-hidden bg-neutral-100">
                 <img
                   src={photo.src}
                   alt={photo.title}
@@ -60,10 +62,10 @@ export const WorkshopGallery: React.FC = () => {
                 />
               </div>
               <div className="p-5">
-                <h3 className="font-display text-lg font-bold text-slate-900 mb-1">
+                <h3 className="font-display text-lg font-bold text-black mb-1">
                   {photo.title}
                 </h3>
-                <p className="text-slate-600 text-sm">{photo.subtitle}</p>
+                <p className="text-neutral-600 text-sm">{photo.subtitle}</p>
               </div>
             </div>
           ))}

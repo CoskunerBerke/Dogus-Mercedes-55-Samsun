@@ -3,39 +3,39 @@ import { Star, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { reviewsList, ReviewItem } from '../data/reviewsData';
 
 const ReviewCard: React.FC<{ review: ReviewItem }> = ({ review }) => (
-  <div className="w-[340px] sm:w-[400px] shrink-0 bg-slate-900 border border-slate-800 rounded-xl p-5 mx-2.5 flex flex-col justify-between select-none shadow-md">
+  <div className="w-[340px] sm:w-[400px] shrink-0 bg-neutral-950 border border-neutral-800 hover:border-neutral-600 rounded-xl p-5 mx-2.5 flex flex-col justify-between select-none shadow-md transition-colors">
     <div>
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-0.5">
           {[...Array(review.rating)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <Star key={i} className="w-4 h-4 fill-white text-white" />
           ))}
         </div>
-        <span className="text-[11px] font-bold text-sky-300 bg-sky-950/70 border border-sky-800/60 px-2.5 py-0.5 rounded-md">
+        <span className="text-[11px] font-bold text-white bg-neutral-900 border border-neutral-700 px-2.5 py-0.5 rounded-md">
           {review.carModel}
         </span>
       </div>
 
-      <p className="text-slate-200 text-sm leading-relaxed mb-4">
+      <p className="text-neutral-200 text-sm leading-relaxed mb-4">
         &ldquo;{review.content}&rdquo;
       </p>
     </div>
 
-    <div className="flex items-center justify-between pt-3 border-t border-slate-800">
+    <div className="flex items-center justify-between pt-3 border-t border-neutral-800">
       <div className="flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center">
+        <div className="w-8 h-8 rounded-full bg-white text-black font-bold text-xs flex items-center justify-center">
           {review.avatarText}
         </div>
         <div>
           <div className="text-sm font-bold text-white flex items-center gap-1">
             {review.author}
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
           </div>
-          <div className="text-[11px] text-slate-400">{review.timeAgo} • Google Yorumu</div>
+          <div className="text-[11px] text-neutral-400">{review.timeAgo} • Google Yorumu</div>
         </div>
       </div>
       {review.highlight && (
-        <span className="text-[11px] font-semibold text-slate-300 bg-slate-800 px-2 py-0.5 rounded">
+        <span className="text-[11px] font-semibold text-neutral-200 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded">
           {review.highlight}
         </span>
       )}
@@ -47,14 +47,14 @@ export const ReviewRiver: React.FC = () => {
   const loopReviews = [...reviewsList, ...reviewsList];
 
   return (
-    <section id="yorumlar" className="py-14 md:py-18 bg-slate-950 border-y border-slate-800 overflow-hidden">
+    <section id="yorumlar" className="py-14 md:py-18 bg-black border-y border-neutral-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-white text-white" />
                 ))}
               </div>
               <span className="text-white font-bold text-sm">4.8 / 5 Google İşletme Puanı</span>
@@ -68,10 +68,10 @@ export const ReviewRiver: React.FC = () => {
             href="https://maps.app.goo.gl/L96AQBgHhupn1F45A"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 px-4 py-2.5 rounded-lg border border-slate-700 transition-colors self-start md:self-auto"
+            className="inline-flex items-center gap-2 text-sm font-bold text-black bg-white hover:bg-neutral-200 px-4 py-2.5 rounded-lg transition-colors self-start md:self-auto"
           >
             <span>Google Haritalar&apos;da Tüm Yorumları Gör</span>
-            <ExternalLink className="w-4 h-4 text-sky-400" />
+            <ExternalLink className="w-4 h-4 text-black" />
           </a>
         </div>
       </div>
